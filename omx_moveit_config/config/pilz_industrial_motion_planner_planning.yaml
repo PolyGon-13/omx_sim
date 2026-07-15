@@ -1,0 +1,14 @@
+# Humble port of the upstream (Jazzy) pilz planning yaml. See ompl_planning.yaml
+# for the API-mapping notes. Pilz time-parameterizes internally, so (as upstream)
+# AddTimeOptimalParameterization is NOT in its adapter list. Upstream keys
+# (default_planner_config, capabilities) are preserved unchanged.
+planning_plugin: pilz_industrial_motion_planner/CommandPlanner
+default_planner_config: PTP
+request_adapters: >-
+    default_planner_request_adapters/ResolveConstraintFrames
+    default_planner_request_adapters/FixWorkspaceBounds
+    default_planner_request_adapters/FixStartStateBounds
+    default_planner_request_adapters/FixStartStateCollision
+capabilities: >-
+    pilz_industrial_motion_planner/MoveGroupSequenceAction
+    pilz_industrial_motion_planner/MoveGroupSequenceService

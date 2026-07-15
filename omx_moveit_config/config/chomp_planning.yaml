@@ -1,0 +1,12 @@
+# Humble port of the upstream (Jazzy) chomp_planning.yaml. See ompl_planning.yaml
+# for the API-mapping notes. Upstream keys (enable_failure_recovery, ridge_factor)
+# are preserved unchanged.
+planning_plugin: chomp_interface/CHOMPPlanner
+enable_failure_recovery: true
+request_adapters: >-
+    default_planner_request_adapters/AddTimeOptimalParameterization
+    default_planner_request_adapters/ResolveConstraintFrames
+    default_planner_request_adapters/FixWorkspaceBounds
+    default_planner_request_adapters/FixStartStateBounds
+    default_planner_request_adapters/FixStartStateCollision
+ridge_factor: 0.01

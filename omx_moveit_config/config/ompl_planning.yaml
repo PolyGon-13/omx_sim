@@ -1,0 +1,16 @@
+# Humble port of the upstream (Jazzy) ompl_planning.yaml.
+# Only the MoveIt planning-pipeline API differs between distros; the intent is
+# kept identical to github.com/ROBOTIS-GIT/open_manipulator (main):
+#   planning_plugins:            -> planning_plugin (Humble uses the singular key)
+#   request/response_adapters:   -> a single space-separated request_adapters string
+#   default_planning_*_adapters  -> default_planner_request_adapters (Humble class names)
+# AddTimeOptimalParameterization is a request adapter in Humble (it was a response
+# adapter upstream); ValidateSolution / DisplayMotionPath have no Humble request-
+# adapter equivalent (Humble does this inside the pipeline) so they are dropped.
+planning_plugin: ompl_interface/OMPLPlanner
+request_adapters: >-
+    default_planner_request_adapters/AddTimeOptimalParameterization
+    default_planner_request_adapters/ResolveConstraintFrames
+    default_planner_request_adapters/FixWorkspaceBounds
+    default_planner_request_adapters/FixStartStateBounds
+    default_planner_request_adapters/FixStartStateCollision
