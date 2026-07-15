@@ -39,8 +39,12 @@ source install/setup.bash
 ros2 launch omx_bringup omx_f_gazebo.launch.py
 ```
 
+![Gazebo Simulation](images/gazebo.png)
+
 ### 2. MoveIt (Rviz + Moveit)
 
 ```bash
 ros2 launch omx_moveit_config omx_f_moveit.launch.py use_sim:=true
 ```
+
+![MoveIt in RViz](images/rviz_moveit.png)
