@@ -1,5 +1,7 @@
 # omx_sim
 
+[![Reference](https://img.shields.io/badge/Reference-open__manipulator-blue?logo=github)](https://github.com/ROBOTIS-GIT/open_manipulator.git)
+
 ## Packages
 
 | Package | 설명 |
