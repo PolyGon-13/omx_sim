@@ -1,3 +1,6 @@
+.vscode/
+.claude/
+
 build/
 install/
 log/

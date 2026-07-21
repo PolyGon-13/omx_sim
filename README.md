@@ -13,17 +13,6 @@
 ## Requirements
 
 - Ubuntu 22.04 / ROS 2 Humble
-- Gazebo (gz sim) + 관련 패키지
-
-```bash
-sudo apt install \
-  ros-humble-ros-gz \
-  ros-humble-gz-ros2-control \
-  ros-humble-ros2-control \
-  ros-humble-ros2-controllers \
-  ros-humble-moveit \
-  ros-humble-xacro
-```
 
 ## Build
 
@@ -41,12 +30,8 @@ source install/setup.bash
 ros2 launch omx_bringup omx_f_gazebo.launch.py
 ```
 
-![Gazebo Simulation](images/gazebo.png)
-
 ### 2. MoveIt (Rviz + Moveit)
 
 ```bash
 ros2 launch omx_moveit_config omx_f_moveit.launch.py use_sim:=true
 ```
-
-![MoveIt in RViz](images/rviz_moveit.png)
